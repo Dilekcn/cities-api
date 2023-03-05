@@ -5,14 +5,16 @@ const router = require("express").Router();
 
 const app = express();
 const port = process.env.PORT || 5000;
+const url = "http://54.237.21.180";
+const url1 = "http://3.85.41.9";
 
 const fetch = require("node-fetch");
 
 async function getCityAndDescription() {
   try {
-    const cityRes = await fetch("http://localhost:5001/city");
+    const cityRes = await fetch(`${url}:5001/city`);
     const cityData = await cityRes.json();
-    const descriptionRes = await fetch("http://localhost:5002/description");
+    const descriptionRes = await fetch(`${url1}:5002/description`);
     const descriptionData = await descriptionRes.json();
     return {
       city: cityData,
