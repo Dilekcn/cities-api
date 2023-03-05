@@ -35,6 +35,6 @@ app.get("/", async (req, res) => {
   res.status(200).json(`${city.cityname} is ${description.description}`);
 });
 
-//app.get("/", (req, res) => res.send("AWS Cities!!!"));
+app.get("/", (req, res) => res.send("AWS Cities!!!"));
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
